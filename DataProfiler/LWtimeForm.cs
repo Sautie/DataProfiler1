@@ -121,10 +121,11 @@ namespace DataProfiler
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series("Mois_Bar");
             int[] t = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             List<string> months = GetMonthNamesByCulture(new CultureInfo("fr-FR"));
+           
             foreach (FileInfo ee in Form1.Lddo)
             {               
                     int h = ee.LastWriteTime.Month;
-                    t[h] = t[h] + 1;
+                    t[h-1] = t[h-1] + 1;
             }
                 string[] monthsa = months.ToArray();
                 series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -183,7 +184,7 @@ namespace DataProfiler
             {
                 System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series("Ans");
                 System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series("Ans_Bar");
-                int[] a = new int[] { 0, 0, 0, 0, 0,  0, 0, 0,0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, };
+                int[] a = new int[] { 0, 0, 0, 0, 0,  0, 0, 0,0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
                 string[] aa = new string[a.Length];
                 int uu = 0;
                 while (uu < a.Length)
@@ -211,12 +212,12 @@ namespace DataProfiler
                 while ((u < aa.Length)&&(aa[u] != " ")) u++;
                 string[] aan;
                 int[] an;
-                if (u < 4)
+                if (u < 26)
                 {
-                    aan = new string[4];
-                    an = new int[4];
+                    aan = new string[26];
+                    an = new int[26];
                     u = 0;
-                    while (u < 4) 
+                    while (u < 26) 
                     {
                         aan[u] = aa[u];
                         an[u] = a[u];
@@ -256,7 +257,33 @@ namespace DataProfiler
                 chart1.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.LightGray;
 
             }
+            else if (ChosenItem == "Heures")
+            {
+                System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series("Heures");
+                System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series("Heures_Bar");
+                int[] t = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+                foreach (FileInfo ee in Form1.Lddo)
+                {
+                    int h = ee.LastWriteTime.Hour;
+                    t[h] = t[h] + 1;
+                }
+                series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+                series1.Points.DataBindY(t);
+                series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+                series2.Points.DataBindY(t);
+                chart1.Series.Clear();
+                chart1.Series.Add(series1);
+                chart1.Series.Add(series2);
 
+                // additional styling
+                chart1.ResetAutoValues();
+                chart1.Titles.Clear();
+                chart1.Titles.Add($"Frequences vs heures");
+                chart1.ChartAreas[0].AxisX.Title = "Heures";
+                chart1.ChartAreas[0].AxisY.Title = "Frequences";
+                chart1.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.LightGray;
+                chart1.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.LightGray;
+            }
         }
 
     }

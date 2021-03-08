@@ -235,8 +235,7 @@ namespace DataProfiler
                 }
             }
             ss = "Dossier " + ddi.Name + ":" + nL + nL + "Nombre de fichiers: " + Convert.ToString(Fnumber) + nL + nL + "Espace disque: " + Convert.ToString(TotKb) + " Kb"+ nL +nL;
-            ss +=  "Dans le dossier, " + s + " ,les fichiers, " + name3 + " et " + name4 + " , ";
-            ss += "contenant des informations plus détaillées ont été enregistrés." + nL;
+            ss +=  "Output dans le dossier, " + s + ": les fichiers, " + name3 + " et " + name4;          
             DataScanForm childForm = new DataScanForm();
             openChildFormInPanel(childForm);            
             calf = true;
@@ -349,7 +348,7 @@ namespace DataProfiler
                 }
             }
             sd = "Dossier " + ddi.Name + ":" + nL + nL + "Nombre de sous-dossiers supérieurs: " + Convert.ToString(Lsudir.Count) + nL + nL ;
-            sd += "Dans le dossier, " + s + " , le fichier, "+ name2+", contenant des informations plus detaillees a été enregistré." ;
+            sd += "Output dans le dossier: " + s + " , le fichier, "+ name2;
             DataScanForm2 childForm = new DataScanForm2();
             openChildFormInPanel(childForm);            
             cald = true;
@@ -446,7 +445,7 @@ namespace DataProfiler
             iconPictureBox6.Visible = false;
 
             DialogResult result;
-            result = MessageBox.Show("Voulez-vous vraiment quitter l'application ?", "Caption", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            result = MessageBox.Show("Voulez-vous vraiment quitter l'application ?", "Quitter", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
 

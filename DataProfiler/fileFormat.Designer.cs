@@ -96,11 +96,11 @@ namespace DataProfiler
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.button3.Location = new System.Drawing.Point(261, 462);
+            this.button3.Location = new System.Drawing.Point(311, 462);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(198, 42);
+            this.button3.Size = new System.Drawing.Size(148, 42);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Top sous-dossiers";
+            this.button3.Text = "Datasets";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

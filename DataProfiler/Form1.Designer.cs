@@ -111,7 +111,7 @@ namespace DataProfiler
             this.iconButton9.Name = "iconButton9";
             this.iconButton9.Size = new System.Drawing.Size(304, 63);
             this.iconButton9.TabIndex = 1;
-            this.iconButton9.Text = "Exit";
+            this.iconButton9.Text = "Sortie";
             this.iconButton9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton9.UseVisualStyleBackColor = false;
@@ -134,7 +134,7 @@ namespace DataProfiler
             this.iconButton8.Name = "iconButton8";
             this.iconButton8.Size = new System.Drawing.Size(304, 63);
             this.iconButton8.TabIndex = 1;
-            this.iconButton8.Text = "Reset";
+            this.iconButton8.Text = "Réinitialiser";
             this.iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton8.UseVisualStyleBackColor = false;
@@ -168,7 +168,7 @@ namespace DataProfiler
             this.iconButton7.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.iconButton7.Size = new System.Drawing.Size(304, 63);
             this.iconButton7.TabIndex = 1;
-            this.iconButton7.Text = "last write time";
+            this.iconButton7.Text = "date dernière modification";
             this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton7.UseVisualStyleBackColor = false;
@@ -192,7 +192,7 @@ namespace DataProfiler
             this.iconButton6.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.iconButton6.Size = new System.Drawing.Size(304, 69);
             this.iconButton6.TabIndex = 0;
-            this.iconButton6.Text = "file format";
+            this.iconButton6.Text = "format des fichiers";
             this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton6.UseVisualStyleBackColor = false;
@@ -215,7 +215,7 @@ namespace DataProfiler
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(304, 69);
             this.iconButton5.TabIndex = 0;
-            this.iconButton5.Text = "Graphics";
+            this.iconButton5.Text = "Graphiques";
             this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton5.UseVisualStyleBackColor = false;
@@ -244,12 +244,13 @@ namespace DataProfiler
             this.iconButton4.IconColor = System.Drawing.Color.LightSeaGreen;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 40;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton4.Location = new System.Drawing.Point(0, 63);
             this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.iconButton4.Size = new System.Drawing.Size(304, 69);
             this.iconButton4.TabIndex = 0;
-            this.iconButton4.Text = "top sub-folders";
+            this.iconButton4.Text = "datasets";
+            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = false;
             this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
@@ -271,7 +272,7 @@ namespace DataProfiler
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(304, 63);
             this.iconButton3.TabIndex = 0;
-            this.iconButton3.Text = "files";
+            this.iconButton3.Text = "fichiers";
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = false;
@@ -294,7 +295,7 @@ namespace DataProfiler
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(304, 63);
             this.iconButton2.TabIndex = 0;
-            this.iconButton2.Text = "Data Scan";
+            this.iconButton2.Text = "Scan de données";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = false;
@@ -317,7 +318,7 @@ namespace DataProfiler
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(304, 60);
             this.iconButton1.TabIndex = 0;
-            this.iconButton1.Text = "Open";
+            this.iconButton1.Text = "Ouvrir";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
